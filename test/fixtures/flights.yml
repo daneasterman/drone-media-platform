@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  location: MyString
+  video_link: MyString
+  camera: MyString
+  drone: MyString
+  user_id: 1
+
+two:
+  location: MyString
+  video_link: MyString
+  camera: MyString
+  drone: MyString
+  user_id: 1
