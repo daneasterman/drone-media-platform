@@ -1,0 +1,3 @@
+class DronesController < ApplicationController
+
+end
