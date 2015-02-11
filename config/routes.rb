@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
 
-  resources :flights
+  resources :flights do 
+    collection do 
+      get "map"
+    end
+  end
 
   devise_for :users
   root to: "flights#index"

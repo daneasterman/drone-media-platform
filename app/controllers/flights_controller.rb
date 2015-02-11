@@ -15,6 +15,10 @@ class FlightsController < ApplicationController
     respond_with(@flight)
   end
 
+  def map
+    respond_with(@flight)
+  end
+
   def new
     @flight = Flight.new
     respond_with(@flight)

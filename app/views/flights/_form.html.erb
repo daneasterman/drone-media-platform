@@ -15,18 +15,23 @@
     <%= f.label :location %><br>
     <%= f.text_field :location %>
   </div>
+
   <div class="field">
     <%= f.label :video_link %><br>
     <%= f.text_field :video_link %>
   </div>
+
+  <div class="field">
+    <%= f.label :drone %><br>
+    <%= f.collection_select(:drone, Drone.all, :id, :model_make) %>
+    <%#= f.text_field :drone %>
+  </div>
+
   <div class="field">
     <%= f.label :camera %><br>
     <%= f.text_field :camera %>
   </div>
-  <div class="field">
-    <%= f.label :drone %><br>
-    <%= f.text_field :drone %>
-  </div>  
+    
   <div class="actions">
     <%= f.submit %>
   </div>

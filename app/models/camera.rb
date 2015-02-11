@@ -1,5 +1,5 @@
 class Camera < ActiveRecord::Base
 
-  belongs_to :flight
+  has_many :flights
   
 end

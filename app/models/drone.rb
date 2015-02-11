@@ -1,5 +1,9 @@
 class Drone < ActiveRecord::Base
 
-  belongs_to :flight
+  has_many :flights
+
+  def model_make
+    "#{make} #{model}"
+  end
 
 end

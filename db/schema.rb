@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150210150424) do
+ActiveRecord::Schema.define(version: 20150211160339) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,7 +19,6 @@ ActiveRecord::Schema.define(version: 20150210150424) do
   create_table "cameras", force: true do |t|
     t.string   "model"
     t.string   "make"
-    t.integer  "flight_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -27,7 +26,6 @@ ActiveRecord::Schema.define(version: 20150210150424) do
   create_table "drones", force: true do |t|
     t.string   "model"
     t.string   "make"
-    t.integer  "flight_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -40,6 +38,8 @@ ActiveRecord::Schema.define(version: 20150210150424) do
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "drone_id"
+    t.integer  "camera_id"
   end
 
   create_table "users", force: true do |t|

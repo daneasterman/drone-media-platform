@@ -2,6 +2,8 @@ source 'https://rubygems.org'
 
 gem 'devise'
 gem 'rails_12factor', group: :production
+gem 'binding_of_caller'
+gem 'better_errors'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
