@@ -7,8 +7,8 @@ class FlightsController < ApplicationController
   respond_to :html
 
   def index
-    @flights = Flight.all
-    respond_with(@flights)
+    @q = Flight.search(params[:q])
+    @flights = @q.result(distinct: true)   
   end
 
   def show

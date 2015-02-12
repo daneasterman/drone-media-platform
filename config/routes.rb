@@ -1,13 +1,22 @@
 Rails.application.routes.draw do
 
+  get 'home/index'
+
   resources :flights do 
     collection do 
       get "map"
     end
   end
 
-  devise_for :users
-  root to: "flights#index"
+  devise_for :users do
+    get 'sign_in', to: "devise/sessions#new"
+
+    get 'sign_up', to: "devise/registrations#new"
+  end
+  
+  root to: "home#index"
+
+
 
   
   # The priority is based upon order of creation: first created -> highest priority.

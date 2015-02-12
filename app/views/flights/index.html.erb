@@ -1,5 +1,12 @@
 <h1>Flights</h1>
 
+<div class="search-tools">
+  <%= search_form_for @q do |f| %>
+    <div class="filter name">
+      <%= f.text_field :location_cont, placeholder: "Drone Location" %>
+    </div>
+    <% end %>
+
 <table>
   <thead>
     <tr>
