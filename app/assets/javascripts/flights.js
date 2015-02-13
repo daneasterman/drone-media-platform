@@ -33,7 +33,6 @@ myMap.initialize = function() {
 
 }
 
-
      $(function(){
       myMap.mapCanvas = $('#map-canvas')[0];
       myMap.initialize();
