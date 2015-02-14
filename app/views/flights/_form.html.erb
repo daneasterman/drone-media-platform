@@ -14,6 +14,9 @@
   <div class="field">
     <%= f.label :location %><br>
     <%= f.text_field :location %>
+    <%= hidden_field_tag :lat, nil %>
+    <%= hidden_field_tag :lng, nil %>
+    <%= hidden_field_tag :formatted_address, nil %>
   </div>
 
   <div class="field">
@@ -22,14 +25,14 @@
   </div>
 
   <div class="field">
-    <%= f.label :drone %><br>
-    <%= f.collection_select(:drone, Drone.all, :id, :model_make) %>
+    <%= f.label :drone_id, "Select Drone" %><br>
+    <%= f.collection_select(:drone_id, Drone.all, :id, :model_make) %>
     <%#= f.text_field :drone %>
   </div>
 
   <div class="field">
     <%= f.label :camera %><br>
-    <%= f.text_field :camera %>
+    <%= f.collection_select(:camera_id, Camera.all, :id, :model_make) %>
   </div>
     
   <div class="actions">

@@ -12,16 +12,20 @@
   frameborder="0" allowfullscreen></iframe>
 
 </p>
+<div>
+  <%# @flights.each do |flight| %>
+  <p>
+    <strong>Drone:</strong>
+    <%= @flight.drone_id %>
+  </p>
 
-<p>
-  <strong>Camera:</strong>
-  <%= @flight.camera %>
-</p>
+  <p>
+    <strong>Camera:</strong>
+    <%= @flight.camera_id %>
+  </p>
+  <%# end %>
+</div>
 
-<p>
-  <strong>Drone:</strong>
-  <%= @flight.drone %>
-</p>
 
 <%= link_to 'Edit', edit_flight_path(@flight) %> |
 <%= link_to 'Back', flights_path %>

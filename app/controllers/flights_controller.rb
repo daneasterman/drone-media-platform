@@ -8,7 +8,7 @@ class FlightsController < ApplicationController
 
   def index
     @q = Flight.search(params[:q])
-    @flights = @q.result(distinct: true)   
+    @flights = @q.result(distinct: true)
   end
 
   def show
@@ -28,12 +28,18 @@ class FlightsController < ApplicationController
   end
 
   def create
-    @flight = Flight.new(flight_params)
+    @flight           = current_user.flights.new(flight_params)
+    @flight.latitude  = params[:lat]
+    @flight.longitude = params[:lng]
+    @flight.location  = params[:formatted_address]
     @flight.save
     respond_with(@flight)
   end
 
   def update
+    @flight.latitude  = params[:lat]
+    @flight.longitude = params[:lng]
+    @flight.location  = params[:formatted_address]
     @flight.update(flight_params)
     respond_with(@flight)
   end
@@ -49,6 +55,6 @@ class FlightsController < ApplicationController
     end
 
     def flight_params
-      params.require(:flight).permit(:location, :video_link, :camera, :drone, :user_id)
+      params.require(:flight).permit(:location, :video_link, :camera, :drone_id, :user_id, :lat, :lng, :formatted_address)
     end
 end

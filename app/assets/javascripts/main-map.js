@@ -3,7 +3,7 @@ var myMap = myMap || {};
 myMap.initialize = function() {
 
   var mapOptions = {
-    center: { lat:  51.52, lng: -0.115},     
+    center: { lat:  51.52, lng: -0.115},
     zoom: 14,
     mapTypeId:google.maps.MapTypeId.ROADMAP //default
   };
@@ -33,7 +33,9 @@ myMap.initialize = function() {
 
 }
 
-     $(function(){
-      myMap.mapCanvas = $('#map-canvas')[0];
-      myMap.initialize();
-    });
+$(function(){
+  if ($('map-canvas').length > 0) {
+    myMap.mapCanvas = $('#map-canvas')[0];
+    myMap.initialize();
+  }
+});
