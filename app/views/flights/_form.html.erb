@@ -27,11 +27,10 @@
   <div class="field">
     <%= f.label :drone_id, "Select Drone" %><br>
     <%= f.collection_select(:drone_id, Drone.all, :id, :model_make) %>
-    <%#= f.text_field :drone %>
   </div>
 
   <div class="field">
-    <%= f.label :camera %><br>
+    <%= f.label :camera_id, "Select Camera" %><br>
     <%= f.collection_select(:camera_id, Camera.all, :id, :model_make) %>
   </div>
     
