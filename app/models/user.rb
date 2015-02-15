@@ -1,9 +1,7 @@
 class User < ActiveRecord::Base
 
   has_many :flights
-  has_many :comments, through: :flights
-  has_many :drones
-  
+  has_many :drones 
 
 
   # Include default devise modules. Others available are:
