@@ -3,7 +3,7 @@
 <div class="search-tools">
   <%= search_form_for @q do |f| %>
     <div class="filter name">
-      <%= f.text_field :location_cont, placeholder: "Drone Location" %>
+      <%= f.text_field :formatted_address_cont, placeholder: "Drone Location" %>
     </div>
     <% end %>
 
@@ -20,7 +20,7 @@
   <tbody>
     <% @flights.each do |flight| %>
       <tr>
-        <td><%= flight.location %></td>        
+        <td><%= flight.formatted_address %></td>        
         <td><%= flight.camera_id %></td>
         <td><%= flight.drone_id %></td>
         <td><%= link_to 'Show', flight %></td>
