@@ -8,15 +8,14 @@
 <p>
   <strong>Video link:</strong>
 
-  <iframe id="ytplayer" type="text/html" width="560" height="315" src="http://www.youtube.com/embed/<%=@flight.video_link %>"
-  frameborder="0" allowfullscreen></iframe>
+ <%= @flight.video_link_html %>
 
 </p>
 <div>
   <%# @flights.each do |flight| %>
   <p>
     <strong>Drone:</strong>
-    <%= @flight.drone_id %>
+    <%= @flight.drone.model_make %>
   </p>
 
   <p>

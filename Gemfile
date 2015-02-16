@@ -6,6 +6,7 @@ gem 'binding_of_caller'
 gem 'better_errors'
 gem 'ransack'
 gem 'auto_html'
+gem 'faker', '~>1.4.3', group: :development
 
 gem 'normalize-rails'
 

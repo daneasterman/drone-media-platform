@@ -34,7 +34,7 @@ myMap.initialize = function() {
 }
 
 $(function(){
-  if ($('map-canvas').length > 0) {
+  if ($('#map-canvas').length > 0) {
     myMap.mapCanvas = $('#map-canvas')[0];
     myMap.initialize();
   }

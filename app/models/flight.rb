@@ -1,10 +1,8 @@
 class Flight < ActiveRecord::Base
-  include AutoHtmlFor
   
   belongs_to :user
   belongs_to :camera
-
-  has_many :drones
+  belongs_to :drone
 
   auto_html_for :video_link do
     html_escape
