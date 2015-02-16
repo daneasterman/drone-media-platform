@@ -14,8 +14,8 @@
   <div class="field">
     <%= f.label :formatted_address, "Location" %><br>
     <%= f.text_field :formatted_address %>
-    <%= f.hidden_field :lat %>
-    <%= f.hidden_field :lng %>
+    <%= f.hidden_field :lat, :'data-geo'=> 'lat' %>
+    <%= f.hidden_field :lng, :'data-geo' => 'lng' %>
   </div>
 
   <div class="field">

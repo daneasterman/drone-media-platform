@@ -1,3 +1,4 @@
 $(function(){
-  $("#flight_formatted_address").geocomplete({ details: "form" });
+  $("#flight_formatted_address").geocomplete({ details: "form",   detailsAttribute: "data-geo"
+ });
 });
