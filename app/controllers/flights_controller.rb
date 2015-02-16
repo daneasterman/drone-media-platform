@@ -28,18 +28,12 @@ class FlightsController < ApplicationController
   end
 
   def create
-    @flight           = current_user.flights.new(flight_params)
-    # @flight.latitude  = params[:lat]
-    # @flight.longitude = params[:lng]
-    # @flight.location  = params[:formatted_address]
+    @flight = current_user.flights.new(flight_params)    
     @flight.save
     respond_with(@flight)
   end
 
-  def update
-    # @flight.latitude  = params[:lat]
-    # @flight.longitude = params[:lng]
-    # @flight.location  = params[:formatted_address]
+  def update    
     @flight.update(flight_params)
     respond_with(@flight)
   end
@@ -55,6 +49,6 @@ class FlightsController < ApplicationController
     end
 
     def flight_params
-      params.require(:flight).permit(:video_link, :drone_id, :user_id, :latitude, :longitude, :formatted_address)
+      params.require(:flight).permit(:video_link, :drone_id, :user_id, :lat, :lng, :formatted_address)
     end
 end

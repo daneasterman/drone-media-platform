@@ -40,13 +40,13 @@ c6 = Camera.create!(model: "5D", make: "Canon")
 
 # FLIGHTS:
 
-  user.flights.create!(location: "Shoreditch, London N1, UK", video_link: "https://www.youtube.com/watch?v=cfoLYTKObiU", longitude: -0.084728000000041, latitude: 51.52849, drone_id: d1.id)
+  user.flights.create!(formatted_address: "Shoreditch, London N1, UK", video_link: "https://www.youtube.com/watch?v=cfoLYTKObiU", lng: -0.084728000000041, lat: 51.52849, drone_id: d1.id)
 
-  user.flights.create!(location: "Cape Town, Western Cape, South Africa", video_link: "https://www.youtube.com/watch?v=Eh_524coBzA", longitude: 18.4240553, latitude: -33.9248685, drone_id: d2.id )
+  user.flights.create!(formatted_address: "Cape Town, Western Cape, South Africa", video_link: "https://www.youtube.com/watch?v=Eh_524coBzA", lng: 18.4240553, lat: -33.9248685, drone_id: d2.id)  
+  
+  user.flights.create!(formatted_address: "Shoreditch, London N1, UK", video_link: "https://www.youtube.com/watch?v=cfoLYTKObiU", lng: "-0.084728000000041", lat: "51.52849", drone_id: d1.id)
 
-  user.flights.create!(location: "Shoreditch, London N1, UK", video_link: "https://www.youtube.com/watch?v=cfoLYTKObiU", longitude: "-0.084728000000041", latitude: "51.52849", drone_id: d3.id)
-
-  user.flights.create!(location: "Shoreditch, London N1, UK", video_link: "https://www.youtube.com/watch?v=cfoLYTKObiU", longitude: "-0.084728000000041", latitude: "51.52849", drone_id: d5.id)
+  user.flights.create!(formatted_address: "Shoreditch, London N1, UK", video_link: "https://www.youtube.com/watch?v=cfoLYTKObiU", lng: "-0.084728000000041", lat: "51.52849", drone_id: d2.id)
 
 end
 
