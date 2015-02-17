@@ -1,5 +1,7 @@
 var myMap = myMap || {};
 
+myMap.popups = [];
+
 myMap.initialize = function() {
 
   var mapOptions = {
@@ -22,7 +24,6 @@ myMap.initialize = function() {
 
   // var popup = new google.maps.InfoWindow(popupOptions);
 
-  myMap.popups = [];
 
   google.maps.event.addListener(marker, 'click', function(){
     popup.open(myMap.map, marker);
@@ -33,6 +34,18 @@ myMap.initialize = function() {
   }, 1000);
 
 }
+
+ myMap.renderFlights = function(flights) {
+  flights.forEach(function(flight){
+
+    var marker = new google.maps.Marker({ position: {lat: flight.lat, lng: flight.lng} });
+
+    marker.setMap(myMap.map);
+    marker.popup = new google.maps.InfoWindow({ content: flight.formatted_address }) // content: flight.drone.model_make});
+    myMap.popups.push(marker.popup);
+    myMap.setListener(marker);
+  });
+};
 
 $(function(){
   if ($('#map-canvas').length > 0) {
@@ -49,24 +62,12 @@ $(function(){
       dataType: 'json',
       success: function(response){
         console.log(response);
-        renderFlights(response);
+        myMap.renderFlights(response);
 
       }
-    });
+    }); 
 
-  var renderFlights = function(flights) {
-    flights.forEach(function(flight){
-
-      var marker = new google.maps.Marker({ position: {lat: flight.lat, lng: flight.lng} });
-
-      marker.setMap(myMap.map);
-      marker.popup = new google.maps.InfoWindow({ content: flight.formatted_address }) // content: flight.drone.model_make});
-      myMap.popups.push(marker.popup);
-      setListener(marker);
-    });
-  };  
-
-  function setListener(marker) {    
+   myMap.setListener = function(marker) {    
     google.maps.event.addListener(marker, 'click', function() {
       console.log(this);
       myMap.popups.forEach(function(popup){
