@@ -23,6 +23,8 @@
   </p>
 </div>
 
+<% if can? :update, @flight %>
+<%= link_to 'Edit', edit_flight_path(@flight) %>
+<% end %>
 
-<%= link_to 'Edit', edit_flight_path(@flight) %> |
 <%= link_to 'Back', flights_path %>
