@@ -6,6 +6,8 @@ class FlightsController < ApplicationController
 
   respond_to :html
 
+  load_and_authorize_resource
+
   def index
     @q = Flight.search(params[:q])
     @flights = @q.result(distinct: true)

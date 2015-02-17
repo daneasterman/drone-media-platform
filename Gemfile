@@ -7,6 +7,7 @@ gem 'better_errors'
 gem 'ransack'
 gem 'auto_html'
 gem 'faker', '~>1.4.3', group: :development
+gem 'cancancan'
 
 gem 'normalize-rails'
 

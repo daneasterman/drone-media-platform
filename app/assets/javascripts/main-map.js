@@ -5,7 +5,7 @@ myMap.popups = [];
 myMap.initialize = function() {
 
   var mapOptions = {
-    zoom: 2,
+    zoom: 2.5,
     mapTypeId:google.maps.MapTypeId.ROADMAP //default
   };
 
