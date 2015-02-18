@@ -40,12 +40,30 @@ myMap.initialize = function() {
 
     var marker = new google.maps.Marker({ position: {lat: flight.lat, lng: flight.lng} });
 
+  console.log(flight)
+
     marker.setMap(myMap.map);
-    marker.popup = new google.maps.InfoWindow({ content: flight.formatted_address }) // content: flight.drone.model_make});
+    marker.popup = new google.maps.InfoWindow({ content: flight.formatted_address })
+    marker.popup.setContent("<div id='popupcontent'><a href='" + flight.id + "'><strong>" + flight.formatted_address + "</strong><br/></div>");
     myMap.popups.push(marker.popup);
     myMap.setListener(marker);
   });
 };
+// myMap.popup.setContent("<div id='popupcontent'><a href='" + flight.id + "'><strong>" + flight.formatted_address + "</strong><br/>" + flight.drone + "<br/>" + flight.camera + "</a></div>");
+
+ myMap.setListener = function(marker) {    
+  google.maps.event.addListener(marker, 'click', function() {
+    console.log(this);
+    myMap.popups.forEach(function(popup){
+      popup.close();
+    });
+
+    marker.popup.open(myMap.map, this);
+  });
+}
+
+
+
 
 $(function(){
   if ($('#map-canvas').length > 0) {
@@ -66,15 +84,5 @@ $(function(){
 
       }
     }); 
-
-   myMap.setListener = function(marker) {    
-    google.maps.event.addListener(marker, 'click', function() {
-      console.log(this);
-      myMap.popups.forEach(function(popup){
-        popup.close();
-      });
-      marker.popup.open(myMap.map, this);
-    });
-  }
 
 });
