@@ -14,7 +14,7 @@ gem 'fog', '~> 1.3.1'
 
 gem 'normalize-rails'
 
-
+gem 'bourbon'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.8'

@@ -38,6 +38,9 @@ GEM
       rack (>= 0.9.0)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
+    bourbon (3.2.3)
+      sass (~> 3.2)
+      thor
     builder (3.2.2)
     cancancan (1.9.2)
     carrierwave (0.9.0)
@@ -174,6 +177,7 @@ DEPENDENCIES
   auto_html
   better_errors
   binding_of_caller
+  bourbon
   cancancan
   carrierwave (= 0.9.0)
   coffee-rails (~> 4.0.0)
