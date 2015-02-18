@@ -32,4 +32,6 @@
 
 <br>
 
+<% if can? :create, @flight %>
 <%= link_to 'New Flight', new_flight_path %>
+<% end %>
