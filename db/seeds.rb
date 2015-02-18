@@ -47,23 +47,10 @@ c6 = Camera.create!(model: "5D", make: "Canon")
   
   daniel.flights.create!(formatted_address: "Shoreditch, London N1, UK", video_link: "https://www.youtube.com/watch?v=cfoLYTKObiU", lng: "-0.084728000000041", lat: "51.52849", drone_id: d6.id, camera_id: c1.id)
 
-  daniel.flights.create!(formatted_address: "Rio de Janeiro - State of Rio de Janeiro, Brazil" video_link: "https://www.youtube.com/watch?v=mxBM-JLNyBg", lng: -43.1728965, lat: -22.9068467, drone_id: d3.id, camera_id: c5.id)
+  daniel.flights.create!(formatted_address: "Rio de Janeiro - State of Rio de Janeiro, Brazil", video_link: "https://www.youtube.com/watch?v=mxBM-JLNyBg", lng: -43.1728965, lat: -22.9068467, drone_id: d3.id, camera_id: c5.id)
 
   sadiq.flights.create!(formatted_address: "San Francisco, CA, United States", video_link: "https://www.youtube.com/watch?v=dQwBvSYFeJU", lng: "-122.4194155", lat: "37.7749295", drone_id: d5.id, camera_id: c3.id, remote_flight_image_url: "http://i.imgur.com/uW2fzRa.jpg")
 
   daniel.flights.create!(formatted_address: "Palo Alto Caltrain Station, Palo Alto, CA, United States" video_link: "https://www.youtube.com/watch?v=wmIvSvmmfuQ", lng: -122.1649, lat: 37.44307, drone_id: d4.id, camera_id: c1.id, remote_flight_image_url: "http://i.imgur.com/SSbV8o4.jpg")  
 
   sadiq.flights.create!(formatted_address: "New York, NY, United States", video_link: "https://www.youtube.com/watch?v=qz6c7IrmznI", lng: "-74.0059413", lat: "40.7127837", drone_id: d1.id, camera_id: c4.id)
-
-
-
-  
-
-
-
-
-
-
-
-
-
