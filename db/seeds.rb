@@ -35,15 +35,15 @@ c6 = Camera.create!(model: "5D", make: "Canon")
 
 # Normal users
 
-user = User.create!(first_name: "#{Faker::Name.first_name}", last_name: "#{Faker::Name.last_name}", email: "#{Faker::Internet.email}", password: "password", user_image: "#{Faker::Avatar.image}", role: :normal)
+# user = User.create!(first_name: "#{Faker::Name.first_name}", last_name: "#{Faker::Name.last_name}", email: "#{Faker::Internet.email}", password: "password", user_image: "#{Faker::Avatar.image}", role: :normal)
 
 # FLIGHTS:
 
-  user.flights.create!(formatted_address: "Lisbon, Portugal", video_link: "https://www.youtube.com/watch?v=AA_H3tnaaco", lng: -9.13933659999998, lat: 38.7222524, drone_id: d1.id, camera_id: c3.id, remote_flight_image_url: "http://i.imgur.com/qaWCXy7.png")
+  daniel.flights.create!(formatted_address: "Lisbon, Portugal", video_link: "https://www.youtube.com/watch?v=AA_H3tnaaco", lng: -9.13933659999998, lat: 38.7222524, drone_id: d1.id, camera_id: c3.id, remote_flight_image_url: "http://i.imgur.com/qaWCXy7.png")
 
-  user.flights.create!(formatted_address: "Cape Town, Western Cape, South Africa", video_link: "https://www.youtube.com/watch?v=Eh_524coBzA", lng: 18.4240553, lat: -33.9248685, drone_id: d2.id, camera_id: c2.id) 
+  daniel.flights.create!(formatted_address: "Cape Town, Western Cape, South Africa", video_link: "https://www.youtube.com/watch?v=Eh_524coBzA", lng: 18.4240553, lat: -33.9248685, drone_id: d2.id, camera_id: c2.id) 
   
-  user.flights.create!(formatted_address: "Shoreditch, London N1, UK", video_link: "https://www.youtube.com/watch?v=cfoLYTKObiU", lng: "-0.084728000000041", lat: "51.52849", drone_id: d6.id, camera_id: c1.id)
+  daniel.flights.create!(formatted_address: "Shoreditch, London N1, UK", video_link: "https://www.youtube.com/watch?v=cfoLYTKObiU", lng: "-0.084728000000041", lat: "51.52849", drone_id: d6.id, camera_id: c1.id)
 
   
 
