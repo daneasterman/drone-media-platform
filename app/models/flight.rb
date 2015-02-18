@@ -1,4 +1,12 @@
 class Flight < ActiveRecord::Base
+
+  mount_uploader :flight_image, FlightImageUploader
+
+  validates :formatted_address, presence: true
+  validates :video_link, presence: true
+  validates :drone, presence: true
+  validates :camera, presence: true
+  # validate { errors.add(:base, 'You must upload a satellite flight image to continue') if flight_image.blank? }
   
   belongs_to :user
   belongs_to :camera

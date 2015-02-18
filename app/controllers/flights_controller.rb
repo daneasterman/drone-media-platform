@@ -52,6 +52,6 @@ class FlightsController < ApplicationController
     end
 
     def flight_params
-      params.require(:flight).permit(:video_link, :drone_id, :camera_id, :user_id, :lat, :lng, :formatted_address, :model_make)
+      params.require(:flight).permit(:video_link, :drone_id, :camera_id, :user_id, :lat, :lng, :formatted_address, :model_make, :flight_image, :remote_flight_image_url)
     end
 end

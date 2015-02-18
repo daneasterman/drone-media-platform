@@ -11,6 +11,12 @@
  <%= @flight.video_link_html %>
 
 </p>
+
+<p>
+  <b>Drone Flight Path:</b>
+  <%= image_tag @flight.flight_image.url(:thumb).to_s %>
+</p>
+
 <div>
   <p>
     <strong>Drone:</strong>

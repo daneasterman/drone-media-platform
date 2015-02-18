@@ -32,6 +32,11 @@
     <%= f.label :camera_id, "Select Camera" %><br>
     <%= f.collection_select(:camera_id, Camera.all, :id, :model_make) %>
   </div>
+
+  <div class="field">
+      <%= f.label :flight_image, "Upload satellite flight image" %><br />
+      <%= f.file_field :flight_image %>
+  </div>
     
   <div class="actions">
     <%= f.submit %>

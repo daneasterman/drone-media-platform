@@ -9,6 +9,7 @@ gem 'auto_html'
 gem 'faker', '~>1.4.3', group: :development
 gem 'cancancan'
 gem 'carrierwave', '0.9.0'
+gem 'rmagick'
 
 gem 'normalize-rails'
 
