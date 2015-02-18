@@ -1,6 +1,5 @@
 class FlightsController < ApplicationController
 
-  before_action :authenticate_user!
   
   before_action :set_flight, only: [:show, :edit, :update, :destroy]
 
@@ -19,6 +18,13 @@ class FlightsController < ApplicationController
 
   def map
     respond_with(@flight)
+  end
+
+  def myflights
+    # respond_with(@flights)
+    # @q = current_user.flights.search(params[:q])
+    # @flights = @q.result(distinct: true)
+    @flights = current_user.flights
   end
 
   def new

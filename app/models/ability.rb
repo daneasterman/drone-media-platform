@@ -9,6 +9,7 @@ class Ability
     elsif user.persisted?
       can :read, :all
       can :map, Flight
+      can :myflights, Flight
 
       can :create, Flight
       cannot :create, Drone

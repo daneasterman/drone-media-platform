@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :flights do 
     collection do 
       get "map"
+      get "myflights"
     end
   end
 
