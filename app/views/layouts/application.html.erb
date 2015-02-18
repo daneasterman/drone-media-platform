@@ -9,15 +9,15 @@
   <%= csrf_meta_tags %>
 </head>
 
-<%= render partial: "layouts/mainnav" %>
-
-
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
-
 <body>
 
-<%= yield %>
+  <%= render partial: "layouts/mainnav" %>
+  <%#= render partial: "layouts/login" %>
+
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+
+  <%= yield %>
 
 </body>
 </html>

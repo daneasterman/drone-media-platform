@@ -6,8 +6,11 @@
     <nav role="navigation">
       <ul id="js-centered-navigation-menu" class="centered-navigation-menu show">
         
+        <li class="nav-link"><%= link_to "Home", home_index_path %></li>
         <li class="nav-link"><%= link_to "All Flights", flights_path %></li>
-        <li class="nav-link"><%= link_to "My Flights", myflights_flights_path %></li>   
+        <% if can? :myflights, @flight %>
+            <li class="nav-link"><%= link_to "My Flights", myflights_flights_path %></li>
+        <% end %>   
         <li class="nav-link"><%= link_to "Map View", map_flights_path %></li>     
             
           <li class="nav-link">

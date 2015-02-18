@@ -1,3 +1,71 @@
 // Place all the styles related to the Home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.hero {
+  text-align: center;
+  background-image: url("http://i.imgur.com/ERyBxUx.jpg");
+  min-height: 800px;
+
+   ///////////////////////////////////////////////////////////////////////////////////
+  $base-border-radius: 3px !default;
+  $base-accent-color: #b5d3fb !default;
+  $large-screen: em(860) !default;
+  //////////////////////////////////////////////////////////////////////////////////
+
+  $hero-background-top: #7F99BE; 
+  $hero-background-bottom: #20392B;
+  $hero-color: white;
+  $gradient-angle: 10deg;
+  
+
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 3em;
+
+  
+  .hero-inner {
+    @include outer-container;
+    @include clearfix;
+    color: $hero-color;
+    margin: auto;
+    padding: 3.5em;
+    text-align: center;
+    
+    button{
+      background-color: #fa4542; 
+      box-shadow: 0 3px 0 0 #be0201;
+      a{
+        color:white
+      }
+    }
+
+    .hero-copy {
+      text-align: center;
+      
+      h1 {
+        @include media($large-screen) {
+          font-size: 3.5em;
+          margin-bottom: 0.5em;
+          text-shadow: 0px 0px 10px rgba(0,0,0,0.85);
+        }
+
+      }
+
+      p {
+        font-weight: 200;
+        line-height: 1.4em;
+        margin: 0 auto 3em auto; 
+
+        @include media($large-screen) {
+          font-size: 1.4em;
+          max-width: 40%;
+          text-shadow: 0px 0px 10px rgba(0,0,0,0.85);
+        }
+      }
+    }
+
+    
+  }
+}
+
