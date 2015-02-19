@@ -1,6 +1,5 @@
 class FlightsController < ApplicationController
 
-  
   before_action :set_flight, only: [:show, :edit, :update, :destroy]
 
   respond_to :html
