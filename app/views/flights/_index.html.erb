@@ -9,7 +9,7 @@
     </tr>
   </thead>
 
-  <% if can? :create, @flight %>
+  <% if can? :create, Flight %>
   <%= link_to 'New Flight', new_flight_path %>
   <% end %>
 
