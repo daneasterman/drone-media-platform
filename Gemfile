@@ -8,7 +8,7 @@ gem 'ransack'
 gem 'auto_html'
 gem 'faker', '~>1.4.3', group: :development
 gem 'cancancan'
-gem 'carrierwave', '0.9.0'
+gem 'carrierwave', '1.3.2'
 gem 'rmagick'
 gem 'fog', '~> 1.3.1'
 
